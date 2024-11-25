@@ -7,10 +7,22 @@ export default {
   theme: {
     extend: {
       colors: {
-        "light-blue": "#ADD8E6",
-        pink: "#FF69B4",
-        "pink-dark": "#FF1493",
-        black: "#000000",
+        indigo: {
+          400: '#818CF8',
+          500: '#6366F1',
+          600: '#4F46E5',
+        },
+        gray: {
+          700: '#374151',
+          800: '#1F2937',
+          900: '#111827',
+        },
+      },
+      fontFamily: {
+        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+      },
+      maxWidth: {
+        '7xl': '80rem',
       },
     },
   },

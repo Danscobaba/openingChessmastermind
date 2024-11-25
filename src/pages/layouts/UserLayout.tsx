@@ -1,29 +1,26 @@
 import React from 'react'
+import { Outlet } from 'react-router-dom';
 
 const UserLayout = () => {
     return (
         <div className="min-h-screen bg-light-blue flex">
             {/* Sidebar */}
-            <aside className="bg-black text-white w-64 p-6 hidden md:block">
-                <h2 className="text-2xl font-bold mb-6">
-                    Opening<span className="text-pink"> Mastermind</span>
+            <aside className="bg-black text-white w-64  hidden md:block">
+                <h2 className="text-xl bg-white text-black underline p-5 font-bold mb-6">
+                   <img src="/logo.png" alt="" />
                 </h2>
                 <nav>
-                    <ul className="space-y-4">
+                    <ul className="space-y-6">
                         <li>
-                            <a href="/dashboard" className="hover:text-pink transition">
-                                🏠 Dashboard
-                            </a>
+                          <span>Dashboard</span>
                         </li>
                         <li>
-                            <a href="/openings" className="hover:text-pink transition">
-                                ♟ Openings Practice
-                            </a>
+                            <span>Openings Practice</span>
+                            
                         </li>
                         <li>
-                            <a href="/progress" className="hover:text-pink transition">
-                                📈 My Progress
-                            </a>
+                            <span> My Progress
+                            </span>
                         </li>
                         <li>
                             <a href="/leaderboard" className="hover:text-pink transition">
@@ -53,61 +50,10 @@ const UserLayout = () => {
                         </a>
                     </div>
                 </header>
-
-                {/* Dashboard Content */}
-                <main className="p-6">
-                    <section className="mb-6">
-                        <h2 className="text-xl font-bold mb-4">Welcome Back, [User Name]!</h2>
-                        <p className="text-gray-600">
-                            Continue your journey to mastering chess openings.
-                        </p>
-                    </section>
-
-                    {/* Grid Content */}
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {/* Opening Practice */}
-                        <div className="bg-white shadow rounded-lg p-6">
-                            <h3 className="text-lg font-bold mb-4">Opening Practice</h3>
-                            <p className="text-gray-600">
-                                Practice openings with interactive guidance and challenges.
-                            </p>
-                            <a
-                                href="/openings"
-                                className="text-pink hover:underline transition mt-4 inline-block"
-                            >
-                                Start Practicing →
-                            </a>
-                        </div>
-
-                        {/* My Progress */}
-                        <div className="bg-white shadow rounded-lg p-6">
-                            <h3 className="text-lg font-bold mb-4">My Progress</h3>
-                            <p className="text-gray-600">
-                                Track your improvement and milestones.
-                            </p>
-                            <a
-                                href="/progress"
-                                className="text-pink hover:underline transition mt-4 inline-block"
-                            >
-                                View Progress →
-                            </a>
-                        </div>
-
-                        {/* Leaderboard */}
-                        <div className="bg-white shadow rounded-lg p-6">
-                            <h3 className="text-lg font-bold mb-4">Leaderboard</h3>
-                            <p className="text-gray-600">
-                                See where you rank among other players.
-                            </p>
-                            <a
-                                href="/leaderboard"
-                                className="text-pink hover:underline transition mt-4 inline-block"
-                            >
-                                View Leaderboard →
-                            </a>
-                        </div>
-                    </div>
-                </main>
+                <div className="">
+                    <Outlet/>
+</div>
+             
             </div>
         </div>
     );
