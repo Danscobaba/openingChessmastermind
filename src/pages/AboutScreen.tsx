@@ -1,16 +1,12 @@
 import React from "react";
+import Header from "./layouts/Header";
 
 const AboutScreen = () => {
     return (
         <div className="min-h-screen bg-light-blue text-black">
             {/* Header Section */}
-            <header className="bg-black text-white p-6">
-                <div className="container mx-auto flex justify-between items-center">
-                    <h1 className="text-3xl font-bold">
-                        Opening<span className="text-pink">&#9815;</span>Mastermind
-                    </h1>
-                </div>
-            </header>
+            <Header />
+
 
             {/* About Section */}
             <section className="container mx-auto py-12 px-6">

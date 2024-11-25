@@ -1,12 +1,14 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const RegisterScreen = () => {
+    const navigate = useNavigate();
     return (
         <div className="min-h-screen flex items-center justify-center bg-light-blue">
             <div className="bg-white rounded-lg shadow-lg w-full max-w-md p-8">
-                <img src="/logo.png" alt="" />
-                <h2 className="text-3xl font-bold text-center text-black mb-6">
-                    Join <span className="text-pink">Opening Mastermind</span>
+                <img onClick={()=>navigate("/")} src="/logo.png" alt="" />
+                <h2 className="text-xl font-bold text-center text-black mb-6">
+                    Create an <span className="text-pink">account</span>
                 </h2>
                 <form className="space-y-4">
                     {/* Full Name Field */}

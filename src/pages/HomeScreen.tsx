@@ -1,30 +1,15 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Chessboard } from "react-chessboard";
+import Header from "./layouts/Header";
 
 const HomeScreen = () => {
+    const navigate = useNavigate();
     return (
         <div className="min-h-screen bg-light-blue text-black flex flex-col">
             {/* Header Section */}
-            <header className="bg-transparent text-white p-6">
-                <div className="container mx-auto flex justify-between items-center">
-                    <div className="w-auto h-[100px]">
-                        <img src="/logo.png" className="h-full w-full" alt="" />
-                    </div>
-                    {/* <h1 className="text-3xl font-bold">
-                        Opening<span className="text-pink"> Mastermind</span>
-                    </h1> */}
-                    <nav>
-                        <Link
-                            to="/login"
-                            className="px-4 py-2 bg-pink text-white rounded hover:bg-pink-dark transition"
-                        >
-                            Login
-                        </Link>
-                    </nav>
-                </div>
-            </header>
 
+            <Header />
             {/* Hero Section */}
             <section className="flex-1 container mx-auto flex flex-col lg:flex-row items-center justify-between p-8">
                 <div className="lg:w-1/2 mb-8 lg:mb-0">
@@ -36,7 +21,7 @@ const HomeScreen = () => {
                         Whether you're a beginner or a pro, Opening Mastermind is your ultimate guide to mastering chess.
                     </p>
                     <Link
-                        to="/register"
+                        to="/auth/register"
                         className="px-6 py-3 bg-pink text-white rounded font-bold text-lg hover:bg-pink-dark transition"
                     >
                         Get Started
